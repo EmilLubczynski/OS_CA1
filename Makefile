@@ -2,14 +2,14 @@ CFLAGS = -c -Wall
 CC = gcc
 DISTDIR = dist
 LIBDIR = lib
-OBJECTS = $(DISTDIR)/solution.o\
+OBJECTS = $(DISTDIR)/simulate.o\
 	  $(DISTDIR)/my-functions.o
 
 link: $(OBJECTS)
-	$(CC) $? -o $(DISTDIR)/solution
+	$(CC) $? -o $(DISTDIR)/simulate
 
-$(DISTDIR)/solution.o: solution.c
-	$(CC) $(CFLAGS) $? -o $(DISTDIR)/solution.o
+$(DISTDIR)/simulate.o: simulate.c
+	$(CC) $(CFLAGS) $? -o $(DISTDIR)/simulate.o
 
 dist/my-functions.o: $(LIBDIR)/my-functions.c
 	$(CC) $(CFLAGS) $? -o $(DISTDIR)/my-functions.o

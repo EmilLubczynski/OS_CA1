@@ -1,6 +1,6 @@
 #ifndef MYFUNCTIONSH
 #define MYFUNCTIONSH
- unsigned short operating_system;
- void function1();
-
+ char* startUp();
+ int random_generator(int, int);
+ int random_generator_2(int, int);
 #endif
